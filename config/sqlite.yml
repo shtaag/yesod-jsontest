@@ -1,0 +1,20 @@
+Default: &defaults
+  database: todosample.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: todosample_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: todosample_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: todosample_production.sqlite3
+  poolsize: 100
+  <<: *defaults

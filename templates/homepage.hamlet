@@ -1,0 +1,6 @@
+<h1>_{MsgHello}
+
+    <form id="todo" method=post action=@{HomeR}/todo enctype=#{formEnctype}>
+      ^{formWidget}
+      <input type="button" value="Send it!" onclick="postTodoJson()">
+

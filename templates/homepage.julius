@@ -1,0 +1,34 @@
+function getTodoJson() {
+    alert("getTodoJson called");
+
+    $.getJSON('/todo',
+        {},
+        function(o){
+            alert(o.status);
+        });
+
+}
+
+function postTodoJson() {
+    alert("postTodoJson called");
+    alert($('#todo [name=f2]').val());
+    alert($('#todo [name=f3]:checked').val());
+
+    $.ajax({
+        url: '/todo',
+        type: 'POST',
+        datatype: 'json',
+        data: {
+            text: $('#todo [name=f2]').val(),
+            done: $('#todo [name=f3]:checked').val()
+        },
+        success: function(o) {
+            alert(o.status);
+        },
+        error: function() {
+            alert("error in post");
+        }
+    });
+
+
+}

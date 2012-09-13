@@ -1,0 +1,6 @@
+cabal-dev
+dist
+.static-cache
+.ghci
+static/tmp
+*.sqlite3
