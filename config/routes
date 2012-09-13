@@ -5,4 +5,4 @@
 /robots.txt RobotsR GET
 
 / HomeR GET
-/todo TodosR GET POST
+/todo TodosR POST
