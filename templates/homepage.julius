@@ -8,10 +8,11 @@ function postTodoJson() {
         url: '/todo',
         type: 'POST',
         datatype: 'json',
-        data: {
+        data: JSON.stringify({
             text: $('#todo [name=f2]').val(),
             done: $('#todo [name=f3]').val()
-        },
+        }),
+        contentType: "application/json; charset=utf-8",
         success: function(o) {
             alert(o.status);
         },

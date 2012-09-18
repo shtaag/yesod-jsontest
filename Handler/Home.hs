@@ -1,8 +1,7 @@
 {-# LANGUAGE TupleSections, OverloadedStrings #-}
 module Handler.Home where
 
-import Import 
--- import Data.Aeson hiding (object)
+import Import
 
 
 postTodosR :: Handler RepJson
